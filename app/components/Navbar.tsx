@@ -2,30 +2,46 @@ import Link from "next/link";
 
 export default function Navbar() {
   return (
-    <nav className='flex items-center justify-between p-3 bg-gray-800 text-white'>
-      {/* Title */}
-      <div className='text-2xl font-bold'>
+    <nav className='flex items-center font-sans justify-between px-5 py-4 bg-white text-gray-900'>
+      <div className='text-2xl'>
         <Link href='/'>Ifran Rahman Nijhum</Link>
       </div>
 
-      {/* Navigation Links */}
-      <div className='space-x-6'>
-        <Link href='#home' className='hover:text-gray-300'>
+      <div className='space-x-8'>
+        <Link
+          href='#home'
+          className='px-3 py-2 rounded-lg hover:bg-gray-200 hover:text-gray-900 transition-colors duration-300'
+        >
           Home
         </Link>
-        <Link href='#research' className='hover:text-gray-300'>
+        <Link
+          href='#research'
+          className='px-3 py-2 rounded-lg hover:bg-gray-200 hover:text-gray-900 transition-colors duration-300'
+        >
           Research
         </Link>
-        <Link href='#resume' className='hover:text-gray-300'>
+        <Link
+          href='#resume'
+          className='px-3 py-2 rounded-lg hover:bg-gray-200 hover:text-gray-900 transition-colors duration-300'
+        >
           Resume
         </Link>
-        <Link href='#achievements' className='hover:text-gray-300'>
+        <Link
+          href='#achievements'
+          className='px-3 py-2 rounded-lg hover:bg-gray-200 hover:text-gray-900 transition-colors duration-300'
+        >
           Achievements
         </Link>
-        <Link href='#service' className='hover:text-gray-300'>
+        <Link
+          href='#service'
+          className='px-3 py-2 rounded-lg hover:bg-gray-200 hover:text-gray-900 transition-colors duration-300'
+        >
           Service
         </Link>
-        <Link href='#contact' className='hover:text-gray-300'>
+        <Link
+          href='#contact'
+          className='px-3 py-2 rounded-lg hover:bg-gray-200 hover:text-gray-900 transition-colors duration-300'
+        >
           Contact
         </Link>
       </div>
