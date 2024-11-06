@@ -1,62 +1,44 @@
 export default function ServiceSection() {
   return (
-    <section id='service'>
-      <div>Service</div>
-      <div>
-        <p>
-          Lorem ipsum dolor sit amet. Non numquam esse ab autem sequi eos vero
-          dolores quo perspiciatis facere in suscipit laudantium sed deleniti
-          autem 33 necessitatibus atque. Ut fugit aliquam in tempora voluptatum
-          sed voluptas voluptate a consectetur eveniet ut debitis perspiciatis.
-          Ut consequatur fugiat est quia veniam est deleniti fuga est porro
-          consequatur. Aut quia quos sed quidem vero id totam repellat est
-          temporibus numquam sed culpa sunt eum esse error? Et reiciendis
-          reiciendis 33 repellat blanditiis cum iste dolor. Et explicabo nemo
-          eum sapiente architecto 33 omnis nemo et rerum molestiae ut voluptates
-          esse qui nihil accusamus non quia unde. Ut consequuntur soluta sit
-          rerum vitae est fugit debitis sit reprehenderit deserunt. Ut quia
-          voluptatibus ut tempore enim et sunt inventore qui autem facilis ea
-          dolorem tempore. Hic incidunt aperiam nam neque nihil et ipsam tenetur
-          nam accusamus sunt ut omnis aspernatur.{" "}
-        </p>
-        <p>
-          Qui possimus rerum qui sequi dolorum quo ipsa consequatur et dolor
-          alias et minima molestias. Sed delectus minus aut sunt iste non maxime
-          expedita. Sed inventore laudantium quo ducimus alias est sequi
-          accusantium qui error Quis non laudantium inventore et maxime
-          voluptatem ex quasi voluptatem. Et sunt veniam sed autem tempore At
-          voluptatem rerum qui dolores cupiditate qui soluta rerum ea asperiores
-          architecto eos debitis esse. In facere odio eum accusantium maxime aut
-          tenetur earum ex quia earum sed atque modi non illum praesentium.{" "}
-        </p>
-        <p>
-          Ut nesciunt officia aut eius earum qui eligendi asperiores id optio
-          molestiae At impedit autem ut quia explicabo. Sed enim nesciunt quo
-          corporis tempora eos odio consectetur qui iusto temporibus et
-          inventore fugiat ut temporibus aliquid. Et veniam omnis est incidunt
-          consequatur sed placeat adipisci. Ea ipsa corporis ea alias sapiente
-          qui magni culpa ex consequatur natus eum accusantium voluptatibus quo
-          internos nisi 33 voluptatem mollitia. Non tempore voluptatem aut
-          repudiandae nostrum aut iusto doloribus ut debitis omnis. Vel
-          doloribus voluptatem eum omnis labore quo pariatur voluptatibus qui
-          temporibus deserunt. Hic molestiae velit et deserunt amet non porro
-          enim id inventore voluptatum eum velit harum et optio impedit sit
-          assumenda libero.{" "}
-        </p>
-        <p>
-          33 libero officiis et eaque consequuntur sed quibusdam rerum et dolor
-          enim quo aliquam cupiditate et eaque molestias nam rerum incidunt. In
-          iusto nobis vel temporibus quaerat non omnis earum et aspernatur sunt
-          non perferendis obcaecati. Est earum velit ab quia omnis ab sapiente
-          odio eos voluptas dolorem. Ea odio fugit aut consequatur aliquam quo
-          blanditiis amet eum sint laudantium. Aut dolores galisum ut ullam
-          laboriosam hic nemo sapiente. Ut architecto omnis aut fugit quasi sit
-          perferendis voluptatem et iste aliquid eos consectetur similique. Aut
-          quae omnis ea voluptas enim aut quam tenetur ut provident iste et
-          molestiae corporis. Qui atque neque qui facilis odio cum saepe officia
-          rem obcaecati saepe. Aut corrupti sapiente nam assumenda nulla aut
-          harum enim.{" "}
-        </p>
+    <section id='service' className='section p-8 bg-gray-900 text-white'>
+      <div className='container mx-auto'>
+        <h2 className='text-3xl font-bold mb-6 text-center md:text-left'>
+          Service
+        </h2>
+
+        {/* Coordinator Role */}
+        <div className='mb-6'>
+          <h3 className='font-bold text-xl'>Coordinator</h3>
+          <p className='italic mb-2'>
+            Team Research & Development, NSU ACM Student Chapter
+          </p>
+          <p className='text-sm mb-4'>Jan 2020 - Jan 2022</p>
+          <ul className='list-disc list-inside space-y-2'>
+            <li>Instructed an object detection research project.</li>
+            <li>
+              Managed an international programming contest “Semi-code” and
+              Inter-University Hackathon &quot;HackNSU Season 3”.
+            </li>
+            <li>
+              Planned and arranged intra-hackathons, programming contests, and
+              team meetings.
+            </li>
+          </ul>
+        </div>
+
+        {/* Sub Executive Role */}
+        <div>
+          <h3 className='font-bold text-xl'>Sub Executive</h3>
+          <p className='italic mb-2'>Team Provision, NSU ACM Student Chapter</p>
+          <p className='text-sm mb-4'>Nov 2020 - Feb 2022</p>
+          <ul className='list-disc list-inside space-y-2'>
+            <li>One of the leads of a team of nearly two hundred members.</li>
+            <li>
+              Worked in arranging, planning contests, recruitment events, and
+              maintaining order and discipline in the team.
+            </li>
+          </ul>
+        </div>
       </div>
     </section>
   );
