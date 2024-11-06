@@ -1,62 +1,106 @@
-export default function AchievementsSection() {
+"use client";
+
+import Image from "next/image";
+import { useState } from "react";
+
+export default function Achievements() {
+  const [isOpen, setIsOpen] = useState(false);
+  const [imageUrl, setImageUrl] = useState("");
+
+  const openImage = (url: string) => {
+    setImageUrl(url);
+    setIsOpen(true);
+  };
+
+  const closeImage = () => {
+    setIsOpen(false);
+    setImageUrl("");
+  };
+
   return (
-    <section id='achievements'>
-      <div>Achievements</div>
-      <div>
-        <p>
-          Lorem ipsum dolor sit amet. Non numquam esse ab autem sequi eos vero
-          dolores quo perspiciatis facere in suscipit laudantium sed deleniti
-          autem 33 necessitatibus atque. Ut fugit aliquam in tempora voluptatum
-          sed voluptas voluptate a consectetur eveniet ut debitis perspiciatis.
-          Ut consequatur fugiat est quia veniam est deleniti fuga est porro
-          consequatur. Aut quia quos sed quidem vero id totam repellat est
-          temporibus numquam sed culpa sunt eum esse error? Et reiciendis
-          reiciendis 33 repellat blanditiis cum iste dolor. Et explicabo nemo
-          eum sapiente architecto 33 omnis nemo et rerum molestiae ut voluptates
-          esse qui nihil accusamus non quia unde. Ut consequuntur soluta sit
-          rerum vitae est fugit debitis sit reprehenderit deserunt. Ut quia
-          voluptatibus ut tempore enim et sunt inventore qui autem facilis ea
-          dolorem tempore. Hic incidunt aperiam nam neque nihil et ipsam tenetur
-          nam accusamus sunt ut omnis aspernatur.{" "}
-        </p>
-        <p>
-          Qui possimus rerum qui sequi dolorum quo ipsa consequatur et dolor
-          alias et minima molestias. Sed delectus minus aut sunt iste non maxime
-          expedita. Sed inventore laudantium quo ducimus alias est sequi
-          accusantium qui error Quis non laudantium inventore et maxime
-          voluptatem ex quasi voluptatem. Et sunt veniam sed autem tempore At
-          voluptatem rerum qui dolores cupiditate qui soluta rerum ea asperiores
-          architecto eos debitis esse. In facere odio eum accusantium maxime aut
-          tenetur earum ex quia earum sed atque modi non illum praesentium.{" "}
-        </p>
-        <p>
-          Ut nesciunt officia aut eius earum qui eligendi asperiores id optio
-          molestiae At impedit autem ut quia explicabo. Sed enim nesciunt quo
-          corporis tempora eos odio consectetur qui iusto temporibus et
-          inventore fugiat ut temporibus aliquid. Et veniam omnis est incidunt
-          consequatur sed placeat adipisci. Ea ipsa corporis ea alias sapiente
-          qui magni culpa ex consequatur natus eum accusantium voluptatibus quo
-          internos nisi 33 voluptatem mollitia. Non tempore voluptatem aut
-          repudiandae nostrum aut iusto doloribus ut debitis omnis. Vel
-          doloribus voluptatem eum omnis labore quo pariatur voluptatibus qui
-          temporibus deserunt. Hic molestiae velit et deserunt amet non porro
-          enim id inventore voluptatum eum velit harum et optio impedit sit
-          assumenda libero.{" "}
-        </p>
-        <p>
-          33 libero officiis et eaque consequuntur sed quibusdam rerum et dolor
-          enim quo aliquam cupiditate et eaque molestias nam rerum incidunt. In
-          iusto nobis vel temporibus quaerat non omnis earum et aspernatur sunt
-          non perferendis obcaecati. Est earum velit ab quia omnis ab sapiente
-          odio eos voluptas dolorem. Ea odio fugit aut consequatur aliquam quo
-          blanditiis amet eum sint laudantium. Aut dolores galisum ut ullam
-          laboriosam hic nemo sapiente. Ut architecto omnis aut fugit quasi sit
-          perferendis voluptatem et iste aliquid eos consectetur similique. Aut
-          quae omnis ea voluptas enim aut quam tenetur ut provident iste et
-          molestiae corporis. Qui atque neque qui facilis odio cum saepe officia
-          rem obcaecati saepe. Aut corrupti sapiente nam assumenda nulla aut
-          harum enim.{" "}
-        </p>
+    <section id='achievements' className='section p-8 bg-gray-900 text-white'>
+      <div className='container mx-auto'>
+        <h2 className='text-3xl font-bold mb-6 text-center md:text-left'>
+          Achievements
+        </h2>
+
+        {/* Achievement 1 */}
+        <div className='mb-6'>
+          <div className='flex items-center md:w-full cursor-pointer'>
+            {/* Image Section */}
+            <div className='w-48 h-48'>
+              <Image
+                src='/achievements_1.jpg' // Add the thumbnail image
+                alt='Innovation Challenge'
+                width={160}
+                height={160}
+                className='w-full h-full object-cover rounded-md shadow-lg hover:scale-110 transition-transform'
+                onClick={() => openImage("/achievements_1.jpg")}
+              />
+            </div>
+
+            {/* Description Section */}
+            <div className='md:ml-6 mt-4 md:mt-0'>
+              <div className='flex items-center mb-4'>
+                <h3 className='font-bold text-xl mr-4'>
+                  Champion, Best Poster Category
+                </h3>
+                <p className='italic text-sm'>Innovation Challenge, 2022</p>
+              </div>
+              <p className='text-md mb-4'>Final year thesis showcase.</p>
+            </div>
+          </div>
+        </div>
+
+        {/* Achievement 2 */}
+        <div className='mb-6'>
+          <div className='flex items-center md:w-full cursor-pointer'>
+            {/* Image Section */}
+            <div className='w-48 h-48'>
+              <Image
+                src='/achievements_2.jpg' // Add the thumbnail image
+                alt='HackNSU 2019'
+                width={160}
+                height={160}
+                className='w-full h-full object-cover rounded-md shadow-lg hover:scale-110 transition-transform'
+                onClick={() => openImage("/achievements_2.jpg")}
+              />
+            </div>
+
+            {/* Description Section */}
+            <div className='md:ml-6 mt-4 md:mt-0'>
+              <div className='flex items-center mb-4'>
+                <h3 className='font-bold text-xl mr-4'>1st Runner Up</h3>
+                <p className='italic text-sm'>HackNSU, 2019</p>
+              </div>
+              <p className='text-md mb-4'>
+                Developed a web-based solution to the then undergraduate
+                admission problems of Bangladesh.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        {/* Expanded Image Modal */}
+        {isOpen && (
+          <div className='fixed inset-0 bg-black bg-opacity-75 flex justify-center items-center z-50'>
+            <div className='relative'>
+              <button
+                onClick={closeImage}
+                className='absolute top-4 right-4 text-white text-xl font-bold'
+              >
+                X
+              </button>
+              <Image
+                src={imageUrl}
+                alt='Expanded Achievement Image'
+                width={400}
+                height={400}
+                className='max-w-full max-h-full object-contain'
+              />
+            </div>
+          </div>
+        )}
       </div>
     </section>
   );
