@@ -4,7 +4,7 @@ export default function HomeSection() {
   return (
     <section
       id='home'
-      className='section p-8 bg-gray-900 flex items-center justify-center'
+      className='section pt-20 p-8 bg-gray-900 flex items-center justify-center'
     >
       <div className='container mx-auto flex flex-col md:flex-row items-center gap-8 md:gap-12'>
         {/* Left Column - Circular Photo */}
