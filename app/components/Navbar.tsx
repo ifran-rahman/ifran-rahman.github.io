@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function Navbar() {
   return (
-    <nav className='flex items-center font-sans justify-between px-5 py-4 bg-white text-gray-900'>
+    <nav className='fixed top-0 left-0 w-full z-10 flex items-center font-sans justify-between px-5 py-4 bg-white text-gray-900'>
       <div className='text-2xl'>
         <Link href='/'>Ifran Rahman Nijhum</Link>
       </div>
