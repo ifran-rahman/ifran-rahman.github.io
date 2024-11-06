@@ -4,18 +4,8 @@ import Image from "next/image";
 import { useState } from "react";
 
 export default function Achievements() {
-  const [isOpen, setIsOpen] = useState(false);
-  const [imageUrl, setImageUrl] = useState("");
-
-  const openImage = (url: string) => {
-    setImageUrl(url);
-    setIsOpen(true);
-  };
-
-  const closeImage = () => {
-    setIsOpen(false);
-    setImageUrl("");
-  };
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [modalImageSrc, setModalImageSrc] = useState("");
 
   return (
     <section id='achievements' className='section p-8 bg-gray-900 text-white'>
@@ -24,22 +14,22 @@ export default function Achievements() {
           Achievements
         </h2>
 
-        {/* Achievement 1 */}
         <div className='mb-6'>
           <div className='flex items-center md:w-full cursor-pointer'>
-            {/* Image Section */}
             <div className='w-48 h-48'>
               <Image
-                src='/achievements_1.jpg' // Add the thumbnail image
+                src='/achievements_1.jpg'
                 alt='Innovation Challenge'
                 width={160}
                 height={160}
                 className='w-full h-full object-cover rounded-md shadow-lg hover:scale-110 transition-transform'
-                onClick={() => openImage("/achievements_1.jpg")}
+                onClick={() => {
+                  setModalImageSrc("/achievements_1.jpg");
+                  setIsModalOpen(true);
+                }}
               />
             </div>
 
-            {/* Description Section */}
             <div className='md:ml-6 mt-4 md:mt-0'>
               <div className='flex items-center mb-4'>
                 <h3 className='font-bold text-xl mr-4'>
@@ -52,22 +42,22 @@ export default function Achievements() {
           </div>
         </div>
 
-        {/* Achievement 2 */}
         <div className='mb-6'>
           <div className='flex items-center md:w-full cursor-pointer'>
-            {/* Image Section */}
             <div className='w-48 h-48'>
               <Image
-                src='/achievements_2.jpg' // Add the thumbnail image
+                src='/achievements_2.jpg'
                 alt='HackNSU 2019'
                 width={160}
                 height={160}
                 className='w-full h-full object-cover rounded-md shadow-lg hover:scale-110 transition-transform'
-                onClick={() => openImage("/achievements_2.jpg")}
+                onClick={() => {
+                  setModalImageSrc("/achievements_2.jpg");
+                  setIsModalOpen(true);
+                }}
               />
             </div>
 
-            {/* Description Section */}
             <div className='md:ml-6 mt-4 md:mt-0'>
               <div className='flex items-center mb-4'>
                 <h3 className='font-bold text-xl mr-4'>1st Runner Up</h3>
@@ -81,22 +71,27 @@ export default function Achievements() {
           </div>
         </div>
 
-        {/* Expanded Image Modal */}
-        {isOpen && (
-          <div className='fixed inset-0 bg-black bg-opacity-75 flex justify-center items-center z-50'>
-            <div className='relative'>
+        {isModalOpen && (
+          <div
+            className='fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50'
+            onClick={() => setIsModalOpen(false)} // Close modal if clicked outside
+          >
+            <div
+              className='relative bg-white p-4 rounded-md'
+              onClick={(e) => e.stopPropagation()} // Prevent closing when clicking inside the modal content
+            >
               <button
-                onClick={closeImage}
-                className='absolute top-4 right-4 text-white text-xl font-bold'
+                className='absolute top-2 right-2 text-gray-500 hover:text-gray-700'
+                onClick={() => setIsModalOpen(false)}
               >
-                X
+                &times;
               </button>
               <Image
-                src={imageUrl}
-                alt='Expanded Achievement Image'
-                width={400}
-                height={400}
-                className='max-w-full max-h-full object-contain'
+                src={modalImageSrc}
+                alt='Modal Image'
+                width={600}
+                height={600}
+                className='object-contain'
               />
             </div>
           </div>
