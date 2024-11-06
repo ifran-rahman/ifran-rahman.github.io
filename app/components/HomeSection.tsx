@@ -1,62 +1,104 @@
+import Image from "next/image";
+
 export default function HomeSection() {
   return (
-    <section id='home'>
-      <div>Home</div>
-      <div>
-        <p>
-          Lorem ipsum dolor sit amet. Non numquam esse ab autem sequi eos vero
-          dolores quo perspiciatis facere in suscipit laudantium sed deleniti
-          autem 33 necessitatibus atque. Ut fugit aliquam in tempora voluptatum
-          sed voluptas voluptate a consectetur eveniet ut debitis perspiciatis.
-          Ut consequatur fugiat est quia veniam est deleniti fuga est porro
-          consequatur. Aut quia quos sed quidem vero id totam repellat est
-          temporibus numquam sed culpa sunt eum esse error? Et reiciendis
-          reiciendis 33 repellat blanditiis cum iste dolor. Et explicabo nemo
-          eum sapiente architecto 33 omnis nemo et rerum molestiae ut voluptates
-          esse qui nihil accusamus non quia unde. Ut consequuntur soluta sit
-          rerum vitae est fugit debitis sit reprehenderit deserunt. Ut quia
-          voluptatibus ut tempore enim et sunt inventore qui autem facilis ea
-          dolorem tempore. Hic incidunt aperiam nam neque nihil et ipsam tenetur
-          nam accusamus sunt ut omnis aspernatur.{" "}
-        </p>
-        <p>
-          Qui possimus rerum qui sequi dolorum quo ipsa consequatur et dolor
-          alias et minima molestias. Sed delectus minus aut sunt iste non maxime
-          expedita. Sed inventore laudantium quo ducimus alias est sequi
-          accusantium qui error Quis non laudantium inventore et maxime
-          voluptatem ex quasi voluptatem. Et sunt veniam sed autem tempore At
-          voluptatem rerum qui dolores cupiditate qui soluta rerum ea asperiores
-          architecto eos debitis esse. In facere odio eum accusantium maxime aut
-          tenetur earum ex quia earum sed atque modi non illum praesentium.{" "}
-        </p>
-        <p>
-          Ut nesciunt officia aut eius earum qui eligendi asperiores id optio
-          molestiae At impedit autem ut quia explicabo. Sed enim nesciunt quo
-          corporis tempora eos odio consectetur qui iusto temporibus et
-          inventore fugiat ut temporibus aliquid. Et veniam omnis est incidunt
-          consequatur sed placeat adipisci. Ea ipsa corporis ea alias sapiente
-          qui magni culpa ex consequatur natus eum accusantium voluptatibus quo
-          internos nisi 33 voluptatem mollitia. Non tempore voluptatem aut
-          repudiandae nostrum aut iusto doloribus ut debitis omnis. Vel
-          doloribus voluptatem eum omnis labore quo pariatur voluptatibus qui
-          temporibus deserunt. Hic molestiae velit et deserunt amet non porro
-          enim id inventore voluptatum eum velit harum et optio impedit sit
-          assumenda libero.{" "}
-        </p>
-        <p>
-          33 libero officiis et eaque consequuntur sed quibusdam rerum et dolor
-          enim quo aliquam cupiditate et eaque molestias nam rerum incidunt. In
-          iusto nobis vel temporibus quaerat non omnis earum et aspernatur sunt
-          non perferendis obcaecati. Est earum velit ab quia omnis ab sapiente
-          odio eos voluptas dolorem. Ea odio fugit aut consequatur aliquam quo
-          blanditiis amet eum sint laudantium. Aut dolores galisum ut ullam
-          laboriosam hic nemo sapiente. Ut architecto omnis aut fugit quasi sit
-          perferendis voluptatem et iste aliquid eos consectetur similique. Aut
-          quae omnis ea voluptas enim aut quam tenetur ut provident iste et
-          molestiae corporis. Qui atque neque qui facilis odio cum saepe officia
-          rem obcaecati saepe. Aut corrupti sapiente nam assumenda nulla aut
-          harum enim.{" "}
-        </p>
+    <section
+      id='home'
+      className='section p-8 bg-gray-900 flex items-center justify-center'
+    >
+      <div className='container mx-auto flex flex-col md:flex-row items-center gap-8 md:gap-12'>
+        {/* Left Column - Circular Photo */}
+        <div className='flex justify-center md:justify-start w-full md:w-auto'>
+          <div className='w-32 h-32 md:w-40 md:h-40 rounded-full overflow-hidden shadow-lg'>
+            <Image
+              src='/profile.png' // Add your image in the public folder with this filename
+              alt='Profile Photo'
+              width={160}
+              height={160}
+              className='object-cover'
+            />
+          </div>
+        </div>
+        <div className='text-center md:text-left'>
+          <h2 className='text-3xl md:text-4xl font-bold mb-4 text-white'>
+            Ifran Rahman Nijhum
+          </h2>
+          <p className='text-md mb-6 text-gray-300'>
+            I am currently a PhD student at University College Dublin in
+            Ireland, specializing in solar power forecasting and estimation
+            using artificial intelligence techniques. I work at the{" "}
+            <a className='text-blue-700' href='https://soumyabrata.dev/theia/'>
+              THEIA lab
+            </a>{" "}
+            at UCD. My research focuses on efficient and improved solar
+            forecasting using computer vision and efficient ml. I have been
+            working on leveraging infrared imaging and model compression
+            techniques to achieve better performance and real-time photovoltaic
+            forecasting capabilities. Previously, I served as a Lecturer at{" "}
+            <a className='text-blue-700' href='https://www.rtm-aktu.edu.bd/'>
+              RTM Al-Kabir Technical University
+            </a>{" "}
+            and worked as a Research Assistant at{" "}
+            <a
+              className='text-blue-700'
+              href='https://sites.google.com/site/tanzilctg/Home'
+            >
+              TnR Lab
+            </a>
+            , North South University. My academic and research journey began
+            with a Bachelor of Science degree in Computer Science and
+            Engineering from{" "}
+            <a className='text-blue-700' href='http://www.northsouth.edu/'>
+              North South University
+            </a>
+            , Bangladesh. Apart from academics, I have participated in many
+            contests. I was highly engaged in co-curricular activities. During
+            the last two years of my bachelor&apos;s, I served as the
+            coordinator of Team R&D and one of the Sub-executives of Team
+            Provision at{" "}
+            <a className='text-blue-700' href='https://nsusc.acm.org/home.html'>
+              NSU ACM SC
+            </a>
+            . In my free time, I love watching movies, series, traveling and
+            taking photos. I like to try out new recipes from time to time as
+            well!
+          </p>
+
+          <div className='flex gap-4 justify-center md:justify-start'>
+            <a
+              href='https://www.linkedin.com/in/ifran-rahman-nijhum-1421b8179/'
+              target='_blank'
+              rel='noopener noreferrer'
+              className='px-6 py-2 bg-blue-600 text-white rounded-full shadow-lg hover:bg-blue-500 transform hover:scale-105 transition-all duration-300 ease-out outline outline-1 outline-blue-400'
+            >
+              LinkedIn
+            </a>
+            <a
+              href='https://github.com/ifran-rahman'
+              target='_blank'
+              rel='noopener noreferrer'
+              className='px-6 py-2 bg-blue-600 text-white rounded-full shadow-lg hover:bg-blue-500 transform hover:scale-105 transition-all duration-300 ease-out outline outline-1 outline-blue-400'
+            >
+              GitHub
+            </a>
+            <a
+              href='https://www.researchgate.net/profile/Ifran_Rahman'
+              target='_blank'
+              rel='noopener noreferrer'
+              className='px-6 py-2 bg-blue-600 text-white rounded-full shadow-lg hover:bg-blue-500 transform hover:scale-105 transition-all duration-300 ease-out outline outline-1 outline-blue-400'
+            >
+              Researchgate
+            </a>
+            <a
+              href='https://medium.com/@ifranrahmannijhum-1215'
+              target='_blank'
+              rel='noopener noreferrer'
+              className='px-6 py-2 bg-blue-600 text-white rounded-full shadow-lg hover:bg-blue-500 transform hover:scale-105 transition-all duration-300 ease-out outline outline-1 outline-blue-400'
+            >
+              Medium
+            </a>
+          </div>
+        </div>
       </div>
     </section>
   );
