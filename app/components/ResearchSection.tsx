@@ -191,7 +191,7 @@ export default function ResearchSection() {
         <div className='mb-6'>
           <h4 className='font-semibold text-xl'>
             <a
-              href='https://www.sciencedirect.com/'
+              href='https://link.springer.com/chapter/10.1007/978-3-031-46335-8_4'
               target='_blank'
               rel='noopener noreferrer'
               className='underline text-blue-500 hover:text-blue-400'
