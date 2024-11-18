@@ -18,7 +18,7 @@ export default function Achievements() {
           <div className='flex items-center md:w-full cursor-pointer'>
             <div className='w-48 h-48'>
               <img
-                src='/achievements_1.jpg'
+                src='./achievements_1.jpg'
                 alt='Innovation Challenge'
                 width={160}
                 height={160}
