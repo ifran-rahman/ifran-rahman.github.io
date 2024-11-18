@@ -17,7 +17,7 @@ export default function Achievements() {
         <div className='mb-6'>
           <div className='flex items-center md:w-full cursor-pointer'>
             <div className='w-48 h-48'>
-              <Image
+              <img
                 src='/achievements_1.jpg'
                 alt='Innovation Challenge'
                 width={160}
@@ -45,7 +45,7 @@ export default function Achievements() {
         <div className='mb-6'>
           <div className='flex items-center md:w-full cursor-pointer'>
             <div className='w-48 h-48'>
-              <Image
+              <img
                 src='/achievements_2.jpg'
                 alt='HackNSU 2019'
                 width={160}
